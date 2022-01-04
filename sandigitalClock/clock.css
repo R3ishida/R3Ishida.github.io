@@ -5,7 +5,7 @@
 .clock {
     position: relative;
     display: inline-block;
-    height: 25vw;
+    height: 25.5vw;
     background-color: rgb(200, 200, 200);
     overflow: hidden;
 }
