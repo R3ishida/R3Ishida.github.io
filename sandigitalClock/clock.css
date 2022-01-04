@@ -1,0 +1,106 @@
+#clock-holder {
+    text-align: center;
+}
+
+.clock {
+    position: relative;
+    display: inline-block;
+    height: 25vw;
+    background-color: rgb(200, 200, 200);
+    overflow: hidden;
+}
+
+.hours, .minutes {
+    width: 15vw;
+    margin: 12vw 2vw auto;
+}
+
+.dots {
+    width: 5vw;
+    margin: 12vw 3vw auto;
+    background-color: orange;
+}
+
+.dotshidden {
+    background-color: white;
+}
+
+table {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 0;
+    border-spacing: 0;
+}
+
+td {
+    width: 5vw;
+    height: 5vw;
+}
+
+.white {
+    position: relative;
+    z-index: 100;
+    background-color: white;
+}
+
+.through {
+    opacity: 0;
+}
+
+.board {
+    position: absolute;
+    left: 0;
+    width: 15vw;
+    height: 25vw;
+    background-color: orange;
+}
+
+.triangle{
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 8.5vw;
+    border-left: 5vw solid rgb(200, 200, 200);
+    border-top: 4vw solid transparent;
+    border-bottom: 4vw solid transparent;
+}
+
+.triangle:hover {
+    cursor: pointer;
+    border-left: 5vw solid gray;
+}
+
+.button {
+    position: relative;
+    display: inline-block;
+    width: 5vw;
+    height: 25vw;
+}
+
+.color {
+    position: absolute;
+    top: 1vw;
+    left: 1vw;
+    width: 5vw;
+    height: 5vw;
+}
+.color:hover {
+    cursor: pointer;
+}
+
+.black {
+    background-color: black;
+}
+.slategray {
+    background-color: slategray;
+}
+.skyblue {
+    background-color: skyblue;
+}
+.greenyellow {
+    background-color: greenyellow;
+}
+.orange {
+    background-color: orange;
+}
