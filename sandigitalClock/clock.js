@@ -149,60 +149,60 @@ function setColor() {
     document.getElementById("color-holder").innerHTML = color_code;
 }
 
+
 setColor()
 clicked = 0
 
-$(function() {
-    $(".color").click(function() {
-        if(clicked == 0) {
-            console.log("clicked!!")
-            //open
-            $('#0').animate({
-                'left': '23vw'
-            }, 300);
-            $('#1').animate({
-                'left': '17.5vw'
-            }, 300);
-            $('#2').animate({
-                'left': '12vw'
-            }, 300);
-            $('#3').animate({
-                'left': '6.5vw'
-            }, 300);
-            $('#4').animate({
-                'left': '1vw'
-            }, 300);
-            clicked = 1
-            $(".color").css("z-index","0")
-        } else {
-            var color_id = $(this).attr('id');
-            color_num = Number(color_id)
-            console.log(colorList[color_num]+"にしましたよ")
-            $(".board").css("background-color",colorList[color_num])
-            $(".dots").css("background-color",colorList[color_num])
-            colorList.push(colorList[color_num])
-            console.log(colorList)
-            colorList.splice(color_num, 1)
-            console.log(colorList)
-            $(this).css("z-index","5")
-            $('#0').animate({
-                'left': '1vw'
-            }, 300);
-            $('#1').animate({
-                'left': '1vw'
-            }, 300);
-            $('#2').animate({
-                'left': '1vw'
-            }, 300);
-            $('#3').animate({
-                'left': '1vw'
-            }, 300);
-            $('#4').animate({
-                'left': '1vw'
-            }, 300);
-            clicked = 0
-        }
-    })
+$(document).on('click', '.color', function(){
+    if(clicked == 0) {
+        console.log("clicked!!")
+        //open
+        $('#0').animate({
+            'left': '23vw'
+        }, 300);
+        $('#1').animate({
+            'left': '17.5vw'
+        }, 300);
+        $('#2').animate({
+            'left': '12vw'
+        }, 300);
+        $('#3').animate({
+            'left': '6.5vw'
+        }, 300);
+        $('#4').animate({
+            'left': '1vw'
+        }, 300);
+        clicked = 1
+        $(".color").css("z-index","0")
+    } else {
+        var color_id = $(this).attr('id');
+        color_num = Number(color_id)
+        console.log(colorList[color_num]+"にしましたよ")
+        $(".board").css("background-color",colorList[color_num])
+        $(".dots").css("background-color",colorList[color_num])
+        colorList.push(colorList[color_num])
+        console.log(colorList)
+        colorList.splice(color_num, 1)
+        console.log(colorList)
+        $(this).css("z-index","5")
+        $('#0').animate({
+            'left': '1vw'
+        }, 300);
+        $('#1').animate({
+            'left': '1vw'
+        }, 300);
+        $('#2').animate({
+            'left': '1vw'
+        }, 300);
+        $('#3').animate({
+            'left': '1vw'
+        }, 300);
+        $('#4').animate({
+            'left': '1vw'
+        }, 300);
+        clicked = 0
+        window.setTimeout(setColor, 500);
+    }
 })
 
 function showClock() {
